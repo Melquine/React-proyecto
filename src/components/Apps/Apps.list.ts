@@ -3,7 +3,7 @@ export const AppsList = [
         title: 'Weather app',
         url: 'https://github.com/Melquine/Weather.git',
         des: 'A small application where weather information is obtained by doing a search of the city or by the location of the user.',
-        img: '/img/weather.jpg',
+        img: './img/weather.jpg',
         tools: ['Agular', 'TypeScript']
 
     },
@@ -11,21 +11,21 @@ export const AppsList = [
         title: 'Citas',
         url: 'https://github.com/Melquine/citas.git',
         des: 'Advanced application where people can request veterinary care for their pet. And you can fully edit the request',
-        img: '/img/citas.jpg',
+        img: './img/citas.jpg',
         tools: ['React', 'TypeScript']
     },
     {
         title: 'Gifs-Stickers search',
         url: 'https://github.com/Melquine/proyectoAngular.git',
         des: 'Web system in charge of requesting trending Gifs-Stickers and searching by name.',
-        img: '/img/gifs-mobil.jpg',
+        img: './img/gifs-mobil.jpg',
         tools: ['Agular', 'TypeScript']
     },
     {
         title: 'Tic-tac-toe game',
         url: 'https://github.com/Melquine/Tic-tac-toe-game.git',
         des: 'A very simple web-based game made interesting using useEffect().',
-        img: '/img/game.jpg',
+        img: './img/game.jpg',
         tools: ['React', 'TypeScript']
 
     },
@@ -33,7 +33,7 @@ export const AppsList = [
         title: 'Calculator app',
         url: 'https://github.com/Melquine/Calculator.git',
         des: 'Basic calculator that makes use of the state by handling it in a more advanced way with useReducer().',
-        img: '/img/calculator.jpg',
+        img: './img/calculator.jpg',
         tools: ['React', 'TypeScript']
 
     }
