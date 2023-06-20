@@ -9,7 +9,7 @@ const Info = ({ title, des, btn, ancla, contact }: IInfo) => {
     return (
         <section>
             <h2 id={ancla}>{title}</h2>
-            <div className={state.theme === 'light' ? 'light inner' : 'dark inner'}>
+            <div className={state.theme === 'light' ? 'light__bg inner' : 'dark__bg inner'}>
                 <div>
                     <p>{des}</p>
                 </div>
@@ -21,10 +21,11 @@ const Info = ({ title, des, btn, ancla, contact }: IInfo) => {
                                     <a
                                         key={x.name}
                                         target='_blank'
-                                        className={state.theme === 'light' ? 'light contact-me ' : 'dark contact-me '}
+                                        className={state.theme === 'light' ? 'contact-me light__color' : 'dark__color contact-me '}
                                         href={x.url}
                                     >
-                                        {x.name}
+                                    <i className={x.icon}></i>
+                                    <span>{x.name}</span>    
                                     </a>
                                 ))
                             }

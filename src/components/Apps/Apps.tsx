@@ -6,7 +6,7 @@ import './Apps.css'
 const Apps = ({title, url, des, img, tools}: IProps) => {
   const {state, setState} = useAppContext()
   return (
-    <div className={state.theme === 'light' ? 'light row inner-projects' : 'dark row inner-projects'}>
+    <div className={state.theme === 'light' ? 'light__theme row inner-projects' : 'dark__theme row inner-projects'}>
       <div className='col-sm-12 col-md-6 col-lg-6'>
 
         <h3>{title}</h3>
@@ -14,8 +14,12 @@ const Apps = ({title, url, des, img, tools}: IProps) => {
           <p>{des}</p>
         </div>
         <div className='tools'>
-          {tools.map(tool => <span key={tool}>{tool}</span>)}
-          <a target='_blank'  href={url}><span className='bi bi-git'></span></a>
+          {tools.map(tool => <span className={state.theme === 'light' ? 
+                                              'light__theme__tools tools_technology' :
+                                              'dark__theme__tools tools_technology' 
+                                              } key={tool}>{tool}
+                              </span>)}
+          <a target='_blank'  href={url}><span className={state.theme === 'light' ? 'light__color bi bi-git' : 'dark__color bi bi-git'}></span></a>
         </div>
 
       </div>

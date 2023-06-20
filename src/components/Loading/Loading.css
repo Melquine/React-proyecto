@@ -1,0 +1,34 @@
+.loading {
+    width: 100%;
+    height: 100vh;
+    background-color: #154360;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-container {
+    min-width: 100px;
+    max-width: 200px;
+}
+
+.logo-load {
+    height: 100%;
+    width: 100%;
+
+
+    animation-name: giro;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes giro {
+    from {
+        transform: rotate(360deg);
+    }to {
+        transform: rotate(0deg);
+    }
+}

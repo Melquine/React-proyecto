@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import useAppContext from '../../hooks/UseContext'
 import Apps from '../Apps/Apps'
 import Intro from '../Intro/Intro'
@@ -11,6 +11,7 @@ import './Main.css'
 
 function Main() {
   const { state, setState } = useAppContext()
+  
   return (
     <main className={state.blur ? 'container blur' : 'container'}>
       <Intro />

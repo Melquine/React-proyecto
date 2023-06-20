@@ -4,34 +4,41 @@
     padding: 15px;
 }
 
-.inner-projects.light {
-    background-color: #d0dae4;
-}
-
-.inner-projects.dark {
-    background-color: #66798b;
-}
-
 .img-cont {
     display: none;
 }
 
-.tools span {
+.tools .tools_technology {
     margin-right: 20px;
     font-family: 'Courier New', Courier, monospace;
     font-size: 17px;
+
+    padding: 7px 8px;
+    border-radius: 8px;
+
+}
+
+.dark__theme__tools {
+    background-color: white;
+    color: #154360;
+}
+
+.light__theme__tools {
+    background-color: #154360;
+    color: white;
+}
+
+.tools a .bi-git {
+    margin-right: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+
+    position: relative;
+    top: 5px;
 }
 
 .tools .bi {
     font-size: 20px;
-}
-
-.inner-projects.light .tools .bi {
-    color: #154360;
-}
-
-.inner-projects.dark .tools .bi {
-    color: white;
 }
 
 @media screen and (min-width: 334px) {

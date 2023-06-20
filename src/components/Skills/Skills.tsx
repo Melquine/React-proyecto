@@ -9,7 +9,7 @@ function Skills() {
   return (
     <section>
     <h2 id='skills'>Skills</h2>
-    <div className={ state.theme === 'light' ? 'light inner' : 'dark inner'}>
+    <div className={ state.theme === 'light' ? 'light__theme inner' : 'dark__theme inner'}>
         <div>
             <p>Not only was I in charge of creating web pages, 
                 I was able to take the role of designing the page

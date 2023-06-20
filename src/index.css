@@ -10,34 +10,66 @@ html {
 
 body {
     overflow-x: hidden;
-    height: 100vh;
     background-color: white!important;
     scroll-behavior: smooth;
 }
 
-body.dark {
+body.dark__theme {
   background-color: #154360 !important;
 }
-body.light {
+body.light__theme {
   background-color: white !important;
 }
 
-.light {
+.light__theme {
+
+	color: #154360;
+	background-color: #d0dae4;
+
+}
+
+.dark__theme {
+
+	color: white;
+	background-color: #66798b;
+
+}
+
+/* texto en light */
+.light__color {
+  color: #154360;
+}
+ /* fondo en light */
+ .light__bg {
+  background-color: #d0dae4;
+ }
+
+ /* texto en dark */
+ .dark__color {
+  color: white;
+ }
+
+ /* fondo en dark */
+ .dark__bg {
+  background-color: #66798b;
+ }
+
+/* .light {
   color: #154360;
 }
 
 .dark {
   color: white;
-}
+} */
 
 .no-scroll {
     overflow-y: hidden;
+    height: 100vh;
 }
 
 /* width */
 ::-webkit-scrollbar {
     width: 6px;
-
   }
   
   /* Track */

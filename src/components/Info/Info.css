@@ -4,58 +4,47 @@
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
-.inner.light {
-    background-color: #d0dae4;
-}
-
-.inner.dark {
-    background-color: #66798b;
-}
-
 .contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contact-me {
+    margin: 15px 0;
+    text-decoration: none;
+    font-weight: 700;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
 
-.contact-me {
-    border: 1px solid transparent;
-    min-width: 100px;
-    width: 150px;
-    height: 60px;
-    margin: 15px 0;
-    text-decoration: none;
-    font-weight: 700;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.contact a {
+    padding: 20px;
 }
 
-.contact a:first-child {
-    margin-right: 2px;
+.contact a:hover {
+    color: inherit !important;
 }
 
-.contact a:last-child {
-    margin-left: 2px;
+/* .contact-me.light__color:hover {
+    color: #66798b;
+}
+.contact-me.dark__color:hover {
+    color: #66798b;
+} */
+
+.contact-me i {
+    font-size: 40px;
 }
 
-.contact-me.light {
-    border: 1px solid #154360;
-    color: #154360;
-}
-.contact-me.light:hover {
-    background-color: #66798b;
-    color: white;
-}
-
-.contact-me.dark {
-    border: 1px solid white;
-    color: white;
-}
-.contact-me.dark:hover {
-    background-color: #154360;
-    color: white;
+.contact-me span {
+    font-size: 16px;
 }
 
 @media screen and (min-width: 380px) and (max-width: 540px) {
@@ -66,9 +55,6 @@
         align-items: center;
     }
 
-    .contact a:last-child {
-        display: none;
-    }
 }
 
 @media screen and (min-width: 540px) {

@@ -9,6 +9,7 @@ export interface IProps {
 export interface IContact {
     name: string;
     url: string;
+    icon: string;
 }
 
 export interface IInfo {

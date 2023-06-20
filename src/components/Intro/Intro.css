@@ -1,8 +1,52 @@
 .intro {
-    margin: 50px 0 30px;
+    padding: 130px 0 30px;
 }
 
 h1 span, span {
     font-family: 'Courier New', Courier, monospace;
     font-size: 26px;
 }
+
+:root {
+    --bg: innerith;
+    --text-color: innerith;
+    --caret-color: innerith;
+    --text-length: 15;
+    --animation-time: 4s;
+}
+
+.typing {
+    /* font-family: 'Inconsolata', Consolas, monospace; */
+    position: relative;
+    width: fit-content;
+	color: var(--text-color);
+    text-align: left;
+
+}
+
+.typing::after {
+    content: "|";
+    position: absolute;
+    right: 0;
+    top: 0px;
+    width: 100%;
+    color: var(--bg);
+    background: var(--caret-color);
+    animation: typing 2.5s steps(var(--text-length)) forwards,
+    caret 1s infinite;
+  }  
+
+.typing.light::after {
+    background: white;
+}
+
+.typing.dark::after {
+    background: #154360;
+}
+
+  @keyframes typing {
+      to { width: 0 }
+  }
+  @keyframes caret {
+      50% { color: transparent }
+  }

@@ -1,15 +1,22 @@
 import React from 'react'
 import useAppContext from '../../hooks/UseContext'
 import './Intro.css'
+import { useVisilbe } from '../../hooks/UseVisible'
 function Intro() {
   const {state, setState} = useAppContext()
+  const { visible, myRef } = useVisilbe()
 
   return (
     <section>
-      <div className={ state.theme === 'light' ? 'light intro' : 'dark intro'}>
+      <div className='intro'>
         <h1>Hello,
           <br />
-          <span>I'm Melquicedec</span></h1>
+          <span className={ 
+            state.theme === 'light' && visible ? 'typing light' :
+            state.theme === 'dark' && visible ? 'typing dark' : ''
+
+            } ref={myRef} >I'm Melquicedec</span>
+        </h1>
         <span>Web developer...</span>
       </div>
     </section>
