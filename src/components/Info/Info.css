@@ -1,7 +1,15 @@
 .inner {
-    padding: 15px 15px 15px;
+    border-radius: 8px;
+    padding: 30px;
     margin-top: 30px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+#light.inner {
+    background-color:   #f4f6f7  ;
+}
+#dark.inner {
+    background-color: #27374D;
 }
 
 .contact {
@@ -31,13 +39,6 @@
 .contact a:hover {
     color: inherit !important;
 }
-
-/* .contact-me.light__color:hover {
-    color: #66798b;
-}
-.contact-me.dark__color:hover {
-    color: #66798b;
-} */
 
 .contact-me i {
     font-size: 40px;

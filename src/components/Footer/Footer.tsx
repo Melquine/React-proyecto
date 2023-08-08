@@ -6,7 +6,7 @@ const Footer = () => {
     const {state, setState} = useAppContext()
   return (
     <footer>
-        <div className={ state.theme === 'light' ? 'light__theme footer' : 'dark__theme footer'}>
+        <div className={ state.theme === 'light' ? 'light__theme footer' : 'dark__theme footer'} id={state.theme}>
             <p>Designed & built by Melquicedec Núñez</p>
         </div>
     </footer>

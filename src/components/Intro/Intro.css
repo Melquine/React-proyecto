@@ -16,7 +16,6 @@ h1 span, span {
 }
 
 .typing {
-    /* font-family: 'Inconsolata', Consolas, monospace; */
     position: relative;
     width: fit-content;
 	color: var(--text-color);
@@ -37,11 +36,11 @@ h1 span, span {
   }  
 
 .typing.light::after {
-    background: white;
+    background:  #e5e7e9 ;
 }
 
 .typing.dark::after {
-    background: #154360;
+    background: #17202A;
 }
 
   @keyframes typing {

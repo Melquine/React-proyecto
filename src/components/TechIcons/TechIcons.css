@@ -1,0 +1,57 @@
+.tech-incons img {
+    width: 100px;
+}
+
+.tech-incons {
+    display: flex;
+    flex-direction: column;
+}
+
+.tech-incons div {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    transition: .5s all ease;
+}
+
+.tech-incons div:hover {
+    transform: scale(1.3);
+}
+
+@media screen and (min-width: 300px) {
+    .tech-incons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+     .tech-incons div {
+        margin: 0;
+        margin-bottom: 20px;
+    } 
+}
+
+@media screen and (min-width: 350px) {
+    .tech-incons {
+        justify-content: space-around;
+    }
+}
+
+@media screen and (min-width: 389px) {
+    .tech-incons {
+        justify-content: space-around;
+    }
+
+    .tech-incons div {
+        margin: 0 10px 20px;
+    } 
+}
+
+@media screen and (min-width: 569px) {
+    .tech-incons {
+        justify-content: center;
+    }
+
+    .tech-incons div {
+        margin: 0 20px 20px;
+    } 
+}

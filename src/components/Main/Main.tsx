@@ -8,6 +8,7 @@ import Info from '../Info/Info'
 import { AboutUser, ContactUser } from '../Info/UserInfo'
 import { AppsList } from '../Apps/Apps.list'
 import './Main.css'
+import TechIcons from '../TechIcons/TechIcons'
 
 function Main() {
   const { state, setState } = useAppContext()
@@ -39,6 +40,9 @@ function Main() {
         />))
       }
 
+      <h2 id='apps' className='apps'>Technologies</h2>
+      <TechIcons />
+
       {ContactUser.map(info =>
       (<Info
         key={info.title}
@@ -48,6 +52,7 @@ function Main() {
         contact={info.contact}
         btn={info.btn}
       />))}
+
 
     </main>
   )

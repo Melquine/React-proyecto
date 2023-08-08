@@ -1,0 +1,1 @@
+export type IState = React.Dispatch<React.SetStateAction<boolean>>

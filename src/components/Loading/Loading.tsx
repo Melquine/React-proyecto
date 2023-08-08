@@ -5,7 +5,7 @@ function Loading() {
   return (
     <div className='loading'>
       <div className='img-container'>
-        <img className='logo-load' src="./img/logo.png" alt="Logo" />
+        <img className='logo-load' src="./img/loading-logo.png" alt="Logo" />
       </div>
     </div>
   )

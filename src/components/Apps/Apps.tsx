@@ -6,7 +6,7 @@ import './Apps.css'
 const Apps = ({title, url, des, img, tools}: IProps) => {
   const {state, setState} = useAppContext()
   return (
-    <div className={state.theme === 'light' ? 'light__theme row inner-projects' : 'dark__theme row inner-projects'}>
+    <div className={state.theme === 'light' ? 'light__theme row inner-projects' : 'dark__theme row inner-projects'} id={state.theme}>
       <div className='col-sm-12 col-md-6 col-lg-6'>
 
         <h3>{title}</h3>

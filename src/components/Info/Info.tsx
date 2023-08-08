@@ -9,7 +9,7 @@ const Info = ({ title, des, btn, ancla, contact }: IInfo) => {
     return (
         <section>
             <h2 id={ancla}>{title}</h2>
-            <div className={state.theme === 'light' ? 'light__bg inner' : 'dark__bg inner'}>
+            <div className={state.theme === 'light' ? 'light__theme inner' : 'dark__theme inner'} id={state.theme}>
                 <div>
                     <p>{des}</p>
                 </div>

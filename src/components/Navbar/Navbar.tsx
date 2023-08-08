@@ -2,74 +2,26 @@ import { useEffect, useRef, useState } from 'react'
 import { MenuItems } from './MenuItems'
 import useAppContext from '../../hooks/UseContext'
 import { useVisilbe } from '../../hooks/UseVisible'
+import screenSize from '../../helper/screenSize'
+import changeTheme from '../../helper/handleTheme'
+import closeMenuOnClick from '../../hooks/closeMenuOnClick'
+import showNavbar from '../../hooks/showNavbar'
+
 
 import './Navbar.css'
 
 const Navbar = () => {
-    const refOne = useRef<HTMLDivElement>(null)
     const [show, setShow] = useState(false)
-    const [scroll, setScroll] = useState(true)
+    const [ scroll ] = showNavbar()
     const { state, setState } = useAppContext()
+    const { refOne } = closeMenuOnClick(show, setShow)
 
-    useEffect(() => {
-
-        const x = window.matchMedia('(min-width: 768px)')
-        x.addEventListener('change', handleResize);
-
-        function handleResize(e: MediaQueryListEvent) {
-            if (state.blur && e.matches) {
-                setState({
-                    ...state,
-                    blur: false
-                })
-                setShow(!show)
-            }
-
-        }
-
-    })
+    screenSize(show, setShow)
+    changeTheme()
 
     useEffect(() => {
         document.body.classList.toggle('no-scroll', show);
     }, [show])
-
-    useEffect(() => {
-        if (state.theme === 'light') {
-            document.body.classList.add('light__theme');
-        } else {
-            document.body.classList.add('dark__theme');
-        }
-
-        return () => {
-            document.body.classList.remove('light__theme');
-            document.body.classList.remove('dark__theme');
-        }
-
-
-    }, [state.theme])
-
-    useEffect(() => {
-
-        const closeMenu = ({ target }: MouseEvent): void => {
-
-            if (!refOne.current?.contains(target as Node) && show) {
-
-                setShow(false)
-
-                setState({
-                    ...state,
-                    blur: false
-                })
-                handleMenu()
-            } else {
-
-            }
-        }
-        document.addEventListener('click', closeMenu, false)
-        return () => {
-            document.removeEventListener('click', closeMenu, false)
-        }
-    }, [state]);
 
     const handleMenu = () => {
         setShow(!show)
@@ -80,37 +32,15 @@ const Navbar = () => {
     }
 
     const handleTheme = () => {
-
         setState({
             ...state,
             theme: state.theme === 'light' ? 'dark' : 'light'
         })
-
     }
 
-    useEffect(() => {
-        let currentY = 0
-        function mostrar() {
-            const { scrollY } = window
-            if (scrollY > currentY && scrollY > 80) {
-                currentY = scrollY
-                setScroll(false)
-
-            } else if (scrollY <= currentY) {
-                currentY = scrollY
-                setScroll(true)
-
-            }
-
-        }
-
-        window.addEventListener('scroll', mostrar, true)
-    }, [])
-
-
     return (
-        <header className={scroll ? 'container-fluid' : 'hide'}>
-            <nav className='container-md NavbarItems' ref={refOne}>
+        <header className={scroll ? 'container-fluid' : 'hide'} id={state.theme}>
+            <nav className={`container-md NavbarItems ${state.theme}`} ref={refOne}>
                 <div className="navbar-logo"><img className='logo' src='./img/logo.png'></img></div>
                 <div className="menu-icon" onClick={handleMenu}>
                     <i className={show ? 'bi bi-x-lg' : 'bi bi-list'}></i>
@@ -118,7 +48,9 @@ const Navbar = () => {
 
                 {/* mobil menu */}
                 <div className={show ? `ul-cont active ${state.theme}` : `ul-cont ${state.theme}`}>
-                    <ul className='nav-menu'>
+
+                    <div className='menu-cont'>
+                        <ul className='nav-menu'>
                         {
                             MenuItems.map((item) => {
                                 return (
@@ -128,14 +60,26 @@ const Navbar = () => {
                                 )
                             })
                         }
-                    </ul>
+                        </ul>
 
-                    <button
-                        onClick={handleTheme}
-                        className={state.theme === 'light' ? 'light theme' : 'dark theme'}
-                    >
+                        <a
+                            href='./resume/Resume-Melquicede-Núñez-Escalante.pdf'
+                            download='Resume-Melquicede-Núñez-Escalante.pdf'
+                            className={state.theme === 'light' ? 'light resume' : 'dark resume'}
+                        >
+                            Resume
+                        </a>
+                    
+                    
+                        <button
+                            onClick={handleTheme}
+                            className={state.theme === 'light' ? 'light theme' : 'dark theme'}
+                        >
                         {state.theme === 'light' ? 'Dark' : 'Light'}
-                    </button>
+                        </button>
+
+                    </div>
+
 
                 </div>
 
@@ -152,6 +96,15 @@ const Navbar = () => {
                             })
                         }
                     </ul>
+
+                    <a
+                        href='./resume/Resume-Melquicede-Núñez-Escalante.pdf'
+                        download='Resume-Melquicede-Núñez-Escalante.pdf'
+                        className={state.theme === 'light' ? 'light resume' : 'dark resume'}
+                        >
+                        Resume
+                    </a>
+
                     <button
                         onClick={handleTheme}
                         className={state.theme === 'light' ? 'light theme' : 'dark theme'}
