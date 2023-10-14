@@ -1,5 +1,12 @@
 export const AppsList = [
     {
+        title: 'Students Information',
+        url: 'https://github.com/Melquine/students',
+        des: 'A small app that connects to an API and a local database to manage student information.',
+        img: './img/students.png',
+        tools: ['React', 'JavaScript']
+    },
+    {
         title: 'Threads',
         url: 'https://github.com/Melquine/react-threads',
         des: 'Demo of the social network threads, where the user can comment, like comments, create posts. Using a dependency to emulate a local database.',
