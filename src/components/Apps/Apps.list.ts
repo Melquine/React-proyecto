@@ -1,5 +1,26 @@
 export const AppsList = [
     {
+        title: 'QuickSort algorithm',
+        url: 'https://github.com/Melquine/quicksort',
+        des: 'A common but powerful algorithm to sort elements. Is a highly efficient sorting technique that divides a large data array into smaller ones.',
+        img: './img/quicksort.png',
+        tools: ['JavaScript', 'JavaScript']
+    },
+    {
+        title: 'Instagram clone',
+        url: 'https://github.com/Melquine/Instagram-clone',
+        des: 'This project tries to emulate some of the most basic and important features of Instagram. It is created with Vite, React, Zustand as App store and Firebase.',
+        img: './img/insta.png',
+        tools: ['React', 'JavaScript']
+    },
+    {
+        title: 'TikTok clone',
+        url: 'https://github.com/Melquine/Tiktok-clone',
+        des: 'This basic TikTok project that obtains information from a database in the cloud and displays it to the user. And tries to emulate the TikTok scrolling feature.',
+        img: './img/tiktok.png',
+        tools: ['React', 'JavaScript']
+    },
+    {
         title: 'Students Information',
         url: 'https://github.com/Melquine/students',
         des: 'A small app that connects to an API and a local database to manage student information.',
